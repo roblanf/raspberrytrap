@@ -25,9 +25,23 @@ Other things you'll need:
 1. A laptop
 2. A microSD card reader that connects to your laptop
 3. Internet access to get things set up
-4. A bit of medium-sized tupperware to make the whole thing waterproof 
+4. A medium-sized plastic food storage container to make the whole thing waterproof. A case 150 x 100 x 60 is just sufficient to house all components.
+5. A drill bit. 6mm diamond core is recommended, but other ones will work.
 
 ## Building it
+
+1. If setting up multiple units label components individually. At the minimum, labelling each Pi and microSD card is essential. 
+
+2. Drill a hole for your camera in the lid of the container. The a 6mm diamond core drill bit will drill a hole *slightly* too small for the Pi Camera lens element. So after drilling the initial hole for the lens, gently wiggle the outside of the spinning drill bit to slightly expand the hole. You should aim to sculpt out a circle only just large enough for the lens, such that it can be snapped into place and held by the plastic. So expand slightly, test with the Pi Camera, and drill out larger if necessary.
+
+3. The Pi Camera is simple to install. Lift the black tabs on the camera port (in between HDMI and AV) and insert the camera board ribbon with contacts facing the HDMI port. Now snap the black tabs back down to secure. 
+
+4. Snap the camera into the drilled hole. Secure with some gaffer tape (or similar) to hold the camera against the inside of the container. 
+
+5. To complete the unit, place the battery with cable into the container, and snap the lid shut. 
+
+
+There is no limit to altnerative options for custom housing and securing your Raspberry Pi. For example, foam padding could be employed if you expected the Pi might need shock absorbers, painting could be done for crytpic coloration, a container with ventilation would be better in conditions where one did not expect it to get wet (e.g. lab experiment), and off-the-shelf Raspberry Pi housings could be used if the unit is to be powered by another kind of power source. 
 
 
 
