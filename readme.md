@@ -48,7 +48,18 @@ There is no limit to altnerative options for custom housing and securing your Ra
 ## Setting it up
 
 #### 1. Put raspbian on the memory card
+
+1. Download raspbian to your computer: https://downloads.raspberrypi.org/raspbian_latest
+
+2. Unzip the raspbian image that you just downloaded
+
+3. Attach your micro-SD to your computer (if your computer has no SD card slot, you'll need a card reader)
+
+4. Install raspbian onto the memory card following these instructions: https://www.raspberrypi.org/documentation/installation/installing-images/README.md
+
 #### 2. Set up your RPi in headless mode
+
+
 #### 3. Install motion-capture software
 #### 4. Configure motion-capture software
 
