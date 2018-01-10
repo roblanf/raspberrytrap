@@ -241,15 +241,15 @@ Now we want to check that the tp link router will work with the raspberry pi.
 
 
 
-#### 8. Build the camera trap
+#### 9. Build the camera trap
 
-2. Drill a hole for your camera in the lid of the container. The a 6mm diamond core drill bit will drill a hole *slightly* too small for the Pi Camera lens element. So after drilling the initial hole for the lens, gently wiggle the outside of the spinning drill bit to slightly expand the hole. You should aim to sculpt out a circle only just large enough for the lens, such that it can be snapped into place and held by the plastic. So expand slightly, test with the Pi Camera, and drill out larger if necessary.
+1. Drill a hole for your camera in the lid of the container. The a 6mm diamond core drill bit will drill a hole *slightly* too small for the Pi Camera lens element. So after drilling the initial hole for the lens, gently wiggle the outside of the spinning drill bit to slightly expand the hole. You should aim to sculpt out a circle only just large enough for the lens, such that it can be snapped into place and held by the plastic. So expand slightly, test with the Pi Camera, and drill out larger if necessary.
 
-3. The Pi Camera is simple to install. Lift the black tabs on the camera port (in between HDMI and AV) and insert the camera board ribbon with contacts facing the HDMI port. Now snap the black tabs back down to secure. 
+2. The Pi Camera is simple to install. Lift the black tabs on the camera port (in between HDMI and AV) and insert the camera board ribbon with contacts facing the HDMI port. Now snap the black tabs back down to secure. 
 
-4. Snap the camera into the drilled hole. Secure with some gaffer tape (or similar) to hold the camera against the inside of the container. 
+3. Snap the camera into the drilled hole. Secure with some gaffer tape (or similar) to hold the camera against the inside of the container. 
 
-5. To complete the unit, place the battery with cable into the container, and snap the lid shut. 
+4. To complete the unit, place the battery with cable into the container, and snap the lid shut. 
 
 
 There is no limit to altnerative options for custom housing and securing your Raspberry Pi. For example, foam padding could be employed if you expected the Pi might need shock absorbers, painting could be done for crytpic coloration, a container with ventilation would be better in conditions where one did not expect it to get wet (e.g. lab experiment), and off-the-shelf Raspberry Pi housings could be used if the unit is to be powered by another kind of power source. 
@@ -257,11 +257,66 @@ There is no limit to altnerative options for custom housing and securing your Ra
 
 
 
+#### 10. Adjusting the camera's optics
+
+The Pi camera has a native minimal focal length that is too long to capture action close to camera. The focal length can be customized by rotating the lens element in its plastic housing. 
+
+1.Connect your camera and open PiKrellCam software (follow instructions above) so that you have a live view of the camera's view.  
+
+2. Looking at the lens, hold the camera board such that the ribbon is aimed down. An anticlockwise rotation will shift the focal point inwards towards the lens, clockwise rotation will move the focal point out towards infinity. 
+
+3. Using a pair of tweezers, turn the lens a small fraction of a turn (e.g. 10 degrees). Using a tape measure, or a ruler, in the live view, finely adjust by small movements to manipulate the focal length. A focal point of 20 - 30 cm from the lens element gives a field of view roughly the size of an A4 piece of paper. 
+
+
+
+#### 11. Setting date and time on the Pi (optional)
+
+Because your Pi is not going have consistent access to power or the Internet, the date and time often needs to be set manually. This can be done via SSH. 
+
+1. Open a terminal window
+
+2. SSH into the pi unit by typing: 
+ > ssh pi@XXX.XXX.X.X 
+
+Where X is the IP address of the Pi Unit. 
+
+3.	Type ‘yes’ if you get an authenticity warning.
+
+4. Enter the password
+
+5.	Change the time by typing
+ > sudo date -s '2017-11-16 11:21:00'
+
+6. Change the timezone by typing  
+ > sudo dpkg-reconfigure tzdata
 
 
 
 
+### Using it in the field
 
+Once set up, the camera is easy to run in the field. 
 
-## Using it in the field
+1. Turn on your portable Wi-Fi network, and connect your laptop/tablet to the network. 
+
+2. Plug the power supply in to your Pi. It should automatically connect to the WiFi network and boot up PiKrellCam. 
+
+3. In a browser, type in the IP address for the Pi unit. Enter login and password if prompted. 
+
+4. You should see the PiKrellCam interface. Click START. (This can be a bit tricky if the interface is flicking [don't know what causes this], as the button moves button around). On clicking START, you have just initiated the PiKrellCam motion script. You can now control the camera recording, the program’s configuration and view/delete videos. 
+
+5. The camera is now running motion capture. You will want to switch it off straight away. Click the button ENABLE: MOTION. This will stop motion from being active. 
+
+6. Position the camera where you like, using the live view to frame the shot. 
+
+7. Secure the camera. I use cam-straps to fasten to a wooden stake. But one could use tripods, beanbags, cable-ties, whatever works.
+
+8. Grooming the scene can drastically reduce false positives! Remove thin, waving blades of grass, or carefully balanced dry leaves from the field of view. The cleaner the scene from lightweight waving objects, the better the results. 
+
+9. If required, set date and time via SSH (see separate instructions for this [LINK]. 
+
+10. When ready to begin motion capture, click ENABLE: MOTION to start running once more.
+
+Once running, the Wifi network can be turned off and the camera will continue to run the PiKrellCam motion detection. 
+
 
