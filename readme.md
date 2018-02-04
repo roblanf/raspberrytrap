@@ -2,7 +2,7 @@
 
 ## What?
 
-[Mike Whitehead](https://michaelrwhitehead.wordpress.com/) (mostly) and [me](http://robertlanfear.com/) (a bit) are interested in using camera traps to make observations about pollinators and other things in Australia. This repo is an attempt to keep things in order, and keep notes of how to build, set up, and use the camera traps. 
+[Mike Whitehead](https://michaelwhitehead.net/) (mostly) and [me](http://robertlanfear.com/) (a bit) are interested in using camera traps to make observations about pollinators and other things in Australia. Initial trials with the camera have successfully shown that a native Australian heath is [both visited by birds, and unable to be visited by honeybees](https://youtu.be/fvPg0uDEknc). This repo is an attempt to keep things in order, and keep notes of how to build, set up, and use the camera traps. 
 
 ## Setup
 
