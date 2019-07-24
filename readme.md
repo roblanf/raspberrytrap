@@ -1,8 +1,14 @@
-# Catching insects with raspberries
+# Raspberry Pi motion-capture camera trap for very small creatures
 
 ## What?
 
-[Mike Whitehead](https://michaelwhitehead.net/) (mostly) and [me](http://robertlanfear.com/) (a bit) are interested in using camera traps to make observations about pollinators and other things in Australia. Initial trials with the camera have successfully shown that a native Australian heath is [both visited by birds, and unable to be visited by honeybees](https://youtu.be/fvPg0uDEknc). This repo is an attempt to keep things in order, and keep notes of how to build, set up, and use the camera traps. 
+[Mike Whitehead](https://michaelwhitehead.net/) (mostly) and [me](http://robertlanfear.com/) (a bit) are interested in using camera traps to make observations about insect pollinators and other things in Australia. Initial trials with the camera have successfully shown that a native Australian heath is [both visited by birds, and unable to be visited by honeybees](https://youtu.be/fvPg0uDEknc). 
+
+As well as capturing ecological data on insects in the field, this camera trap design could be very useful in a lab or controlled environment where researchers want to record movement of their study animals. For example, it could be mounted looking down on arenas/containers of beetles or crickets, or placed at the entrance of tubes or burrows housing small lizards.  
+
+This repo is an attempt to keep things in order, and keep notes of how to build, set up, and use the camera traps. 
+
+If using this guide, remember, it is only a guide, and merely reflects what we have done to get these up and running for our specific needs. This is a vast space of DIY options, and almost every step can be done in another way, with another program, or a different bit of hardware. If you have ideas to clearly improve on what we've done, please contribute! 
 
 ## Setup
 
@@ -10,25 +16,25 @@
 
 Here's what you need, and at least one place you can get each thing. Prices were accurate in mid 2019. 
 
-For each camera trap
+For each camera trap:
 
 Thing | Price | Link
 ------------ | ------------- | -------------
 Raspberry Pi 3 B | $57 | [link](https://www.littlebird.com.au/collections/raspberry-pi/products/raspberry-pi-3-model-b-f1990217-84ed-4cd4-a75a-bd1962465bd8)
 Raspberry Pi camera V2 | $40 | [link](https://www.littlebird.com.au/products/raspberry-pi-camera-board-v2)
 SanDisk 64GB microSDXC | $22 | [link](https://www.officeworks.com.au/shop/officeworks/p/sandisk-ultra-64gb-micro-sdxc-memory-card-sdsq64gb)
-Anker PowerCore+ 10050mAh QC 2.0 | $85 | [link](http://www.buzzgadgets.com.au/anker-powercore-plus-10050mah-portable-battery-charger-black.html?gclid=Cj0KCQjwg7HPBRDUARIsAMeR_0g6MQOVX5g0RElIYtw4LQTRVpH7G-pLAVSdR3GcaE7i3R-tefYY7_kaAtf1EALw_wcB)
+Anker PowerCore+ 10050mAh QC 2.0 | $69 | [link](http://www.buzzgadgets.com.au/anker-powercore-plus-10050mah-portable-battery-charger-black.html?gclid=Cj0KCQjwg7HPBRDUARIsAMeR_0g6MQOVX5g0RElIYtw4LQTRVpH7G-pLAVSdR3GcaE7i3R-tefYY7_kaAtf1EALw_wcB)
 
-Grand total: $204 (excluding shipping)
+Grand total: $188 (excluding shipping)
 
-You'll also need a portable wireless router to help with using these in the field. If you are using them in range of your home wireless netowrk, this is not necessary.
+You'll also need a single portable wireless router to help with using these in the field. If you are using them in range of your home wireless netowrk, this is not necessary.
 
 Thing | Price | Link
 ------------ | ------------- | -------------
 TL-WR802N Wireless N Nano Router| $29.00 | [link](https://www.mwave.com.au/product/tplink-tlwr802n-300mbps-wireless-n-nano-router-ab64161?gclid=Cj0KCQjwg7HPBRDUARIsAMeR_0hcFvUOAFaheZYIzXz1Pkn0HBXFMVBssw69OmRT5FxTK9j_ZKP8kwIaAkWKEALw_wcB)
 
 
-You can also buy various cases for the raspberry pi. They are not strictly necessary but they can be useful for some situations. 
+You can buy various cases for the raspberry pi. They are not strictly necessary but they can be useful for some situations. 
 
 Other things you'll need:
 
@@ -55,13 +61,15 @@ You'll need a USB port to charge each battery. Any USB port works fine, includin
 
 #### 3. Set up microSD card
 
-1. Download raspbian to your computer: https://downloads.raspberrypi.org/raspbian_latest
+1. Format your SD card for FAT (MS-DOS). Protocol here depends on your computer. 
 
-2. Unzip the raspbian image that you just downloaded
+2. Download raspbian to your computer: https://downloads.raspberrypi.org/raspbian_latest
 
-3. Attach your microSD to your computer
+3. Unzip the raspbian image that you just downloaded
 
-4. Install raspbian onto the memory card. Full instructions, covering lots of approaches on all operating systems, are here: https://www.raspberrypi.org/documentation/installation/installing-images/README.md
+4. Attach your microSD to your computer
+
+5. Install raspbian onto the memory card. Full instructions, covering lots of approaches on all operating systems, are here: https://www.raspberrypi.org/documentation/installation/installing-images/README.md
 
 If you are comfortable using the commandline, and you are using a mac, here are the instructions you can follow. Don't just copy-paste the code below if you're not sure what it does. Some of the code alters disks, and if you get it wrong you could be altering your hard drive not the SD card.
 
@@ -76,7 +84,7 @@ diskutil unmountDisk /dev/disk2
 sudo dd bs=1m if=/Users/roblanfear/Desktop/2017-11-29-raspbian-stretch.img of=/dev/rdisk2 conv=sync
 ```
 
-5. Copy and paste the `ssh` file in this repository (it's just an empty text file named 'ssh') onto the SD card. This lets your raspberry pi work in headless mode (i.e. with no screen). More info here: https://stackoverflow.com/questions/41318597/ssh-connection-refused-on-raspberry-pi
+6. Copy and paste the `ssh` file in this repository (it's just an empty text file named 'ssh') onto the SD card. This lets your raspberry pi work in headless mode (i.e. with no screen). More info here: https://stackoverflow.com/questions/41318597/ssh-connection-refused-on-raspberry-pi
 
 You can do this using your normal file browser, or at the commandline something like this:
 
@@ -87,7 +95,7 @@ sudo cp /Users/roblanfear/Documents/github/rasberry_trap/ssh /Volumes/boot
 
 ```
 
-#### 4. Build the pi
+#### 4. Build the Rpi
 
 1. Put the pi board in the case, if you have a case. Your case will depend on your needs, and what you have available. It is not strictly necessary. Our own build is detailed at the end of these instructions. 
 
@@ -236,7 +244,23 @@ Now we want to check that the tp link router will work with the raspberry pi.
 
 6. 
 
+
 #### 8. Configure motion-capture software
+
+PiKrellCam comes with loads of options to configure zones of detection and the thresholds for motion detection. We recommend reading the documentation ***Insert instructions on where to find detailed help on configureation, I think it is actually in the PiKrellCam program, as I can't see it online?***
+
+A quick explanation for what some of the configuration options refer to:
+Mag: The degree (magnitude) of movement threshold
+Cnt: The threshold number (count) of pixels that are moving
+Preview_cleaning: Leave motion parameters embedded on image, or clean them off
+Confirm_gap: Require another movement within x seconds of previous detection before firing
+
+To access pikrellcam.conf in order to manually change settings without webbrowser, 
+
+$ cd .pikrellcam 
+$ sudo nano pikrellcam.conf
+
+***Insert settings I am using***
 
 
 
@@ -259,17 +283,21 @@ There is no limit to altnerative options for custom housing and securing your Ra
 
 #### 10. Adjusting the camera's optics
 
-The Pi camera has a native minimal focal length that is too long to capture action close to camera. The focal length can be customized by rotating the lens element in its plastic housing. 
+The Pi camera has a native minimal focal length (~50cm) that is too long to capture action close to camera. The focal length can be customized by rotating the lens element in its plastic housing. The idea is to increase the distance bwteeen the lens element and the sensor, thereby bringing the focal distance closer to the camera.  
 
-1.Connect your camera and open PiKrellCam software (follow instructions above) so that you have a live view of the camera's view.  
+1. Connect your camera to your Pi, and connect your Pi to the local network, or to a monitor.
 
-2. Looking at the lens, hold the camera board such that the ribbon is aimed down. An anticlockwise rotation will shift the focal point inwards towards the lens, clockwise rotation will move the focal point out towards infinity. 
+2. Open PiKrellCam software (follow instructions above), or run any camera application that will provide you with a live view of the camera's view. 
 
-3. Using a pair of tweezers, turn the lens a small fraction of a turn (e.g. 10 degrees). Using a tape measure, or a ruler, in the live view, finely adjust by small movements to manipulate the focal length. A focal point of 20 - 30 cm from the lens element gives a field of view roughly the size of an A4 piece of paper. 
+3. Looking at the lens, hold the camera board such that the ribbon is aimed down. An anticlockwise rotation will shift the focal point inwards towards the lens, clockwise rotation will move the focal point out towards infinity. 
+
+4. Using a pair of tweezers, turn the lens a small fraction of a turn (e.g. 10 degrees). Using a tape measure, or a ruler, in the live view, finely adjust by small movements to manipulate the focal length. 
+
+I have found a focal point of 20 - 30 cm from the lens element gives a field of view roughly the size of an A4/Letter piece of paper, and this works well for small insects. 
 
 
 
-#### 11. Setting date and time on the Pi (optional)
+#### 11. Setting date and time on the RPi (optional)
 
 Because your Pi is not going have consistent access to power or the Internet, the date and time often needs to be set manually. This can be done via SSH. 
 
