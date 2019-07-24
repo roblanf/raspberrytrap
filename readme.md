@@ -8,18 +8,18 @@
 
 #### 1. Buy what you need
 
-Here's what you need, and at least one place you can get each thing. Prices were accurate in late 2017. 
+Here's what you need, and at least one place you can get each thing. Prices were accurate in mid 2019. 
 
 For each camera trap
 
 Thing | Price | Link
 ------------ | ------------- | -------------
-Raspberry Pi 3 B | $57.95 | [link](https://www.littlebirdelectronics.com.au/raspberry-pi-3~38194)
-Raspberry Pi camera V2 | $59.90 | [link](https://www.littlebirdelectronics.com.au/raspberry-pi-camera-board-v2-8-megapixels)
-SanDisk 64GB microSDXC | $47.98 | [link](https://www.mwave.com.au/product/sandisk-64gb-extreme-microsdxc-uhsi-card-45mbs-ab52673?gclid=Cj0KCQjwg7HPBRDUARIsAMeR_0hD-Axpejh8nX-CrpZ7bEYesIIegPrurTqMBcV850F9jfABD0bgnBIaAoJxEALw_wcB)
-Anker PowerCore+ 10050mAh QC 2.0 | $59.00 | [link](http://www.buzzgadgets.com.au/anker-powercore-plus-10050mah-portable-battery-charger-black.html?gclid=Cj0KCQjwg7HPBRDUARIsAMeR_0g6MQOVX5g0RElIYtw4LQTRVpH7G-pLAVSdR3GcaE7i3R-tefYY7_kaAtf1EALw_wcB)
+Raspberry Pi 3 B | $57 | [link](https://www.littlebird.com.au/collections/raspberry-pi/products/raspberry-pi-3-model-b-f1990217-84ed-4cd4-a75a-bd1962465bd8)
+Raspberry Pi camera V2 | $40 | [link](https://www.littlebird.com.au/products/raspberry-pi-camera-board-v2)
+SanDisk 64GB microSDXC | $22 | [link](https://www.officeworks.com.au/shop/officeworks/p/sandisk-ultra-64gb-micro-sdxc-memory-card-sdsq64gb)
+Anker PowerCore+ 10050mAh QC 2.0 | $85 | [link](http://www.buzzgadgets.com.au/anker-powercore-plus-10050mah-portable-battery-charger-black.html?gclid=Cj0KCQjwg7HPBRDUARIsAMeR_0g6MQOVX5g0RElIYtw4LQTRVpH7G-pLAVSdR3GcaE7i3R-tefYY7_kaAtf1EALw_wcB)
 
-Grand total: $166.88 (excluding shipping)
+Grand total: $204 (excluding shipping)
 
 You'll also need a portable wireless router to help with using these in the field. If you are using them in range of your home wireless netowrk, this is not necessary.
 
@@ -28,7 +28,7 @@ Thing | Price | Link
 TL-WR802N Wireless N Nano Router| $29.00 | [link](https://www.mwave.com.au/product/tplink-tlwr802n-300mbps-wireless-n-nano-router-ab64161?gclid=Cj0KCQjwg7HPBRDUARIsAMeR_0hcFvUOAFaheZYIzXz1Pkn0HBXFMVBssw69OmRT5FxTK9j_ZKP8kwIaAkWKEALw_wcB)
 
 
-You can also buy various cases for the raspberry pi. They are not strictly necessary but they can be useful for some situations. The Router is just to aid in setting up the camera trap in the field. 
+You can also buy various cases for the raspberry pi. They are not strictly necessary but they can be useful for some situations. 
 
 Other things you'll need:
 
@@ -89,9 +89,9 @@ sudo cp /Users/roblanfear/Documents/github/rasberry_trap/ssh /Volumes/boot
 
 #### 4. Build the pi
 
-1. Put the pi board in the case, if you have a case
+1. Put the pi board in the case, if you have a case. Your case will depend on your needs, and what you have available. It is not strictly necessary. Our own build is detailed at the end of these instructions. 
 
-2. Attach the camera, following the instructions
+2. Attach the camera, following the instructions included with the camera board
 
 3. Finish off the case
 
