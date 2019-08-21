@@ -2,7 +2,7 @@
 
 ## What?
 
-[Mike Whitehead](https://michaelwhitehead.net/) (mostly) and [me](http://robertlanfear.com/) (a bit) are interested in using camera traps to make observations about insect pollinators and other things in Australia. Initial trials with the camera have successfully shown that a native Australian heath is [both visited by birds, and unable to be visited by honeybees](https://youtu.be/fvPg0uDEknc). 
+[Mike Whitehead](https://michaelwhitehead.net/) (mostly) and [me](http://robertlanfear.com/) (a bit) are interested in using camera traps to make observations about insect pollinators and other things in Australia. Initial trials with the camera have successfully shown that a native Australian heath is [both visited by birds, and unable to be accessed by honeybees](https://youtu.be/fvPg0uDEknc), and under the right conditions the camera will trigger for [insects as small as a mosquito.](https://youtu.be/W0o_thmN8pM) 
 
 As well as capturing ecological data on insects in the field, this camera trap design could be very useful in a lab or controlled environment where researchers want to record movement of their study animals. For example, it could be mounted looking down on arenas/containers of beetles or crickets, or placed at the entrance of tubes or burrows housing small lizards.  
 
