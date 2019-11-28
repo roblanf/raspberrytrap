@@ -23,9 +23,11 @@ Thing | Price | Link
 Raspberry Pi 3 B | $57 | [link](https://www.littlebird.com.au/collections/raspberry-pi/products/raspberry-pi-3-model-b-f1990217-84ed-4cd4-a75a-bd1962465bd8)
 Raspberry Pi camera V2 | $40 | [link](https://www.littlebird.com.au/products/raspberry-pi-camera-board-v2)
 SanDisk 64GB microSDXC | $22 | [link](https://www.officeworks.com.au/shop/officeworks/p/sandisk-ultra-64gb-micro-sdxc-memory-card-sdsq64gb)
-Anker PowerCore+ 10050mAh QC 2.0 | $69 | [link](http://www.buzzgadgets.com.au/anker-powercore-plus-10050mah-portable-battery-charger-black.html?gclid=Cj0KCQjwg7HPBRDUARIsAMeR_0g6MQOVX5g0RElIYtw4LQTRVpH7G-pLAVSdR3GcaE7i3R-tefYY7_kaAtf1EALw_wcB)
+Anker PowerCore+ 10050mAh QC 2.0 * | $69 | [link](http://www.buzzgadgets.com.au/anker-powercore-plus-10050mah-portable-battery-charger-black.html?gclid=Cj0KCQjwg7HPBRDUARIsAMeR_0g6MQOVX5g0RElIYtw4LQTRVpH7G-pLAVSdR3GcaE7i3R-tefYY7_kaAtf1EALw_wcB)
 
 Grand total: $188 (excluding shipping)
+
+*Apparently these have become difficult to source. But any powerbank with a USB output will work. When buying, keep in mind size and shape, as this determines what size container you can fit it in. 
 
 You'll also need a single portable wireless router to help with using these in the field. If you are using them in range of your home wireless netowrk, this is not necessary.
 
